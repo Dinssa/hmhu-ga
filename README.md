@@ -10,12 +10,16 @@ This website…
 - MongoDB, a flexible and NoSQL document database, stores all the data in this project, such as users, templates, forms, and projects.
 - The appearance is enhanced by Bootstrap sass, which allows some customization of variables. Font Awesome icons and Google fonts are also used to improve the look and feel.
 
-# Live Preview
+# Archived
 <p align="center">
-Check out this site deployed on <a href="https://www.heroku.com/">Heroku</a>
-<br>
-  <a href="https://ga.hmhu.io/" target="_blank"><strong>https://ga.hmhu.io/</strong></a>
+<strong>This repository is archived and is no longer maintained.</strong>
 </p>
+
+This is the original version of HelpMeHelpYou, built in July 2023 as my fourth and final project for the General Assembly Software Engineering Immersive. The code is now over three years old and is kept here as a record of where the project started.
+
+HelpMeHelpYou has continued in active development since then. It has been rebuilt from scratch and is live at **[helpmehelpyou.io](https://helpmehelpyou.io)**.
+
+This version is no longer deployed, so the old live preview link has been removed. The screenshots below show how it looked.
 
 # Getting Started
 ## Prerequisites
@@ -62,11 +66,11 @@ General Project Requirements:
 
 # Planning
 ## Entity Relationship Diagram
-[![First ERD](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216564&authkey=%21ACEncFkDuIYFpWg&width=700)](#)  
+![First ERD](docs/images/first-erd.png)  
 I started planning this project by creating an ERD diagram that showed the structure and relationships of the database. It was a useful guide, but not the final version. As I coded, I realised that there were some inefficiencies and improvements that could be made.
 
 The following ERD diagram is more accurate and reflects the changes I made:  
-[![Final ERD](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216561&authkey=%21AL3odlI_nnXizUM&width=700)](#)  
+![Final ERD](docs/images/final-erd.png)  
 
 The ERD consists of 4 main models and 3 embedded documents:
 - User 
@@ -75,23 +79,23 @@ The ERD consists of 4 main models and 3 embedded documents:
 - Template (containing the fields document which contains the options document)
 
 ## Mockups
-[![Home page](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216562&authkey=%21ALSR-xu2UVDBRlw&width=700)](#)  
+![Home page](docs/images/home-page.png)  
 
 The home page, along with the ‘Clients’ and ‘Freelancers’ pages, provides clear and concise information about how the site can benefit vistors.  
 
-[![Templates page](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216565&authkey=%21AJn6yBZuGhPHK2w&width=700)](#)  
+![Templates page](docs/images/templates-page.png)  
 
 The templates page enables freelancers to design and save customised forms that they can easily reuse for their projects.  
 
-[![Template editor page](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216567&authkey=%21AN6rxyz3ewgnxS8&width=700)](#)  
+![Template editor page](docs/images/template-editor-page.png)  
 
 The site’s key feature is the template editor, which allows freelancers to create custom forms with various input types, arrange them with drag and drop functionality, and configure the options for each field.  
 
-[![Projects page](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216568&authkey=%21AH_bpfIypEFiM9E&width=700)](#)  
+![Projects page](docs/images/projects-page.png)  
 
 Using their own templates, freelancers can easily manage multiple projects for different clients or jobs, and generate forms for each aspect of their work. They can also copy a link to each form and share it with their clients, who can fill in the required information online.  
 
-[![Landing page for clients before a form](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216566&authkey=%21APgR-m14HIL4SXU&width=700)](#)  
+![Landing page for clients before a form](docs/images/landing-page-for-clients-before-a-form.png)  
 
 When a client receives a link from the freelancer, they can access the form through this landing page. They have the option to either log in and create an account, which allows them to store and review their forms, or to complete it as a guest without signing in.  
 
@@ -106,11 +110,11 @@ Adopting a mobile first approach was a smart decision for this project, as it si
 ## Backend
 The backend of this MERN project is designed to follow the RESTful principles and to send JSON data as responses. It uses Express as the server framework and organises the code into models, controllers, and views. The models define the data structures and schemas for the database. The controllers handle the requests and business logic for each endpoint. The views format and return the JSON data to the client.
 
-For this project, I wanted to create a robust and flexible backend that could handle all the possible operations and interactions with the data models. Therefore, I created every possible API endpoint that I could need and then some to manipulate the models. I also documented each endpoint using Swagger, which is a tool that helps you create clear and consistent documentation for your APIs. You can find the Swagger documentation for all the endpoints at https://ga.hmhu.io/api/. I tested each and every endpoint with sample data in Postman, including how each model interacted with the others.
+For this project, I wanted to create a robust and flexible backend that could handle all the possible operations and interactions with the data models. Therefore, I created every possible API endpoint that I could need and then some to manipulate the models. I also documented each endpoint using Swagger, which is a tool that helps you create clear and consistent documentation for your APIs. When the server is running, the Swagger documentation for all the endpoints is served at `/api`. I tested each and every endpoint with sample data in Postman, including how each model interacted with the others.
 
 You can also view the complete list of endpoints below:  
 
-[![Available api endpoints](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216563&authkey=%21ALZ9GAg8fG7s5kE&width=700)](#)
+![Available api endpoints](docs/images/available-api-endpoints.png)
 
 If we follow one example use of the api to create a new project it starts in the projects page (ProjectsPage.jsx) where on the following line the user can click the “New Project” button:
 ```javascript
@@ -118,7 +122,7 @@ If we follow one example use of the api to create a new project it starts in the
 ```
 When you click on the New Project button, a modal window will pop up with a form that lets you create a new project. The form has some basic fields, such as project name and description. It also has an expandable section that allows you to add some optional links that are related to your project. You can use these links to save some useful resources or references for your project.  
 
-[![New project form](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216573&authkey=%21AEke1WPF7n_ac0M&width=700)](#)
+![New project form](docs/images/new-project-form.jpg)
 
 When a user clicks create the form data is passed along from the modal component to the projects page. 
 
@@ -169,7 +173,7 @@ export async function createProject(projectData) {
 ```
 If we take a look at the swagger api documentation to create a project   we must send a POST request to the API endpoint on the base url and that creates a new project document. 
 
-[![Create project api documentation](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216571&authkey=%21APswFhpImEjcUi0&width=700)](#)
+![Create project api documentation](docs/images/create-project-api-documentation.png)
 
 I have created similar utilities for interacting with the user, form, and template collections in the database. Each utility contains various functions that use the sendRequest utility to format and send RESTful requests to the corresponding API endpoints. The sendRequest utility is a module that simplifies the process of making HTTP requests and handling errors and responses. It also adds the necessary headers and parameters to the requests, such as the JWT token for authentication. By using these utilities, I can easily access and manipulate the data in the database without writing repetitive code.
 
@@ -249,7 +253,7 @@ The main projects page consists of four components: the search component, which 
 
 This page has a responsive design that adapts to different screen sizes. On screens smaller than 768px wide, the layout is vertical, with the project view component below the projects list component. On screens larger than 768px wide, the layout is horizontal, with the project view component next to the projects list component. I also applied some additional CSS properties to each element to make them look good and user-friendly on both mobile and desktop devices.  
 
-[![Projects page snipet](https://onedrive.live.com/embed?resid=3AAE4294F4C93984%216572&authkey=%21AK8Jf-ID9qQW8vM&width=700)](#)  
+![Projects page snipet](docs/images/projects-page-snippet.png)  
 
 The project view component, shown above, displays the project’s details, such as title, description, and optional links, as defined in the ERD. It also shows the forms that belong to the project. To add a new form, the user can like the “Add Form” button which opens a modal that lets them choose one of their own templates and optionally add a name. If they don’t change the name, it will be the same as the template’s name. To add the new form to the project, the POST method on the API endpoint /api/projects/addform/{projectId}/{templateId} is used, which requires the ID of the selected project and the ID of the template selected in the form.
 
